@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ./scripts/01_init.sql:/docker-entrypoint-initdb.d/01_init.sql
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=username
+      - POSTGRES_DB=logbook
+  api:
+    build: .
+    ports:
+      - "3333:3333"
+    depends_on:
+      - db

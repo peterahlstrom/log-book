@@ -1,0 +1,6 @@
+{
+  "validApiKeys": {
+    "abc123": "dev",
+    "def456": "prod"
+  }
+}
