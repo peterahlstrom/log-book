@@ -116,4 +116,3 @@ Returns a book by its unique identifier.
 Deletes a book from the database.
 
 `:id` is the unique book ID.
->>>>>>> 34514b0 (docs: add readme)
